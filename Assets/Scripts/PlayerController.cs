@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float positionYawFactor = 2f;
     [SerializeField] float controlRollFactor = -30f;
 
+    [SerializeField] ParticleSystem[] guns;
+
     float yThrow;
     float xThrow;
     // Start is called before the first frame update
@@ -26,17 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         ProcessTranslation();
         ProcessRotation();
-    }
-
-    private void ProcessRotation()
-    {
-        float pitchDueToPosition = transform.localPosition.y * postitionPitchFactor;
-        float pitchDueToControlThrow = yThrow * controlPitchFactor;
-
-        float pitch = pitchDueToPosition + pitchDueToControlThrow;
-        float yaw = transform.localPosition.x * positionYawFactor;
-        float roll = xThrow * controlRollFactor;
-        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+        ProcessFiring();
     }
 
     private void ProcessTranslation()
@@ -51,5 +43,33 @@ public class PlayerController : MonoBehaviour
         float yPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
         transform.localPosition = new Vector3(xPos, yPos, transform.localPosition.z);
+    }
+
+    private void ProcessRotation()
+    {
+        float pitchDueToPosition = transform.localPosition.y * postitionPitchFactor;
+        float pitchDueToControlThrow = yThrow * controlPitchFactor;
+
+        float pitch = pitchDueToPosition + pitchDueToControlThrow;
+        float yaw = transform.localPosition.x * positionYawFactor;
+        float roll = xThrow * controlRollFactor;
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
+    private void ProcessFiring()
+    {
+        if (Input.GetButton("Fire1"))
+            SetGunsActive(true);
+        else
+            SetGunsActive(false);
+    }
+
+    private void SetGunsActive(bool isActive)
+    {
+        foreach (ParticleSystem gun in guns)
+        {
+            var emission = gun.emission;
+            emission.enabled = isActive;
+        }
     }
 }
