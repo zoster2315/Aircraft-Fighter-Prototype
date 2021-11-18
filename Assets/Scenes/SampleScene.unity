@@ -251,6 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 903e083459f41a74bb9f194aced55527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crashParticle: {fileID: 3200836327345539238, guid: d5f0cae3fa2997640b70492c03a775f6, type: 3}
 --- !u!95 &286390587 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7716123563159915779, guid: 43968859cb50e744a9ca7a33350fba13, type: 3}
@@ -615,6 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 903e083459f41a74bb9f194aced55527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crashParticle: {fileID: 3200836327345539238, guid: d5f0cae3fa2997640b70492c03a775f6, type: 3}
 --- !u!1 &2044406199
 GameObject:
   m_ObjectHideFlags: 0
