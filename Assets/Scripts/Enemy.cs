@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         scoreBoard = FindObjectOfType<ScoreBoard>();
+        gameObject.AddComponent<Rigidbody>().useGravity = false;
+        parent = GameObject.FindWithTag("SpawnerRuntime").transform;
     }
 
     private void OnParticleCollision(GameObject other)
