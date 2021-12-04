@@ -30,12 +30,12 @@ public class Enemy : MonoBehaviour
     {
         ParticleSystem vfx = Instantiate(hitParticle, transform.position, Quaternion.identity);
         vfx.transform.parent = parent;
-        scoreBoard.IncreaseScore(score);
         healthPoints--;
     }
 
     private void KillEnemy()
     {
+        scoreBoard.IncreaseScore(score);
         //Debug.Log($"{gameObject.name} hited by {other.gameObject.name}");
         GameObject vfx = Instantiate(crashParticle, transform.position, Quaternion.identity);
         vfx.transform.parent = parent;
