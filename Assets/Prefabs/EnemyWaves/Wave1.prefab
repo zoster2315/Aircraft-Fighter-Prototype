@@ -112,10 +112,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Viper (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 9063448079833466772, guid: c24c40a2b022cfe40b38c6522c650f1c, type: 3}
-      propertyPath: healthPoints
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c24c40a2b022cfe40b38c6522c650f1c, type: 3}
 --- !u!1 &8825395942768410108 stripped
@@ -202,10 +198,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Viper
       objectReference: {fileID: 0}
-    - target: {fileID: 9063448079833466772, guid: c24c40a2b022cfe40b38c6522c650f1c, type: 3}
-      propertyPath: healthPoints
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c24c40a2b022cfe40b38c6522c650f1c, type: 3}
 --- !u!1 &8825395943099086693 stripped
@@ -291,10 +283,6 @@ PrefabInstance:
     - target: {fileID: 6223839567681517329, guid: c24c40a2b022cfe40b38c6522c650f1c, type: 3}
       propertyPath: m_Name
       value: Viper (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 9063448079833466772, guid: c24c40a2b022cfe40b38c6522c650f1c, type: 3}
-      propertyPath: healthPoints
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c24c40a2b022cfe40b38c6522c650f1c, type: 3}
