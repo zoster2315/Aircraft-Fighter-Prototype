@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7716123562491500876}
   - component: {fileID: 7716123562491500875}
   - component: {fileID: 7716123562491500874}
+  - component: {fileID: 1034598705821419223}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -83,6 +84,66 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7716123562491500873}
   m_Enabled: 1
+--- !u!114 &1034598705821419223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7716123562491500873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 7716123562491500876}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 1
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &7716123563159915777
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +156,7 @@ GameObject:
   - component: {fileID: 7716123563159915779}
   m_Layer: 0
   m_Name: Player Rig
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +168,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7716123563159915777}
-  m_LocalRotation: {x: -0, y: -0.3994193, z: -0, w: 0.9167684}
+  m_LocalRotation: {x: 0, y: 0.39942113, z: -0, w: -0.9167676}
   m_LocalPosition: {x: 361.89993, y: 34.4, z: 33.29998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -115,7 +176,7 @@ Transform:
   - {fileID: 5424994296583964262}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 359, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 312.91602, z: 0}
 --- !u!95 &7716123563159915779
 Animator:
   serializedVersion: 3
@@ -142,6 +203,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7716123563159915778}
     m_Modifications:
+    - target: {fileID: 1791758082, guid: 5706df97cdf27ba49a0f927eb658626d, type: 3}
+      propertyPath: guns.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791758082, guid: 5706df97cdf27ba49a0f927eb658626d, type: 3}
+      propertyPath: guns.Array.data[0]
+      value: 
+      objectReference: {fileID: 7212903875890194561}
+    - target: {fileID: 1791758082, guid: 5706df97cdf27ba49a0f927eb658626d, type: 3}
+      propertyPath: guns.Array.data[1]
+      value: 
+      objectReference: {fileID: 2609917848659058443}
     - target: {fileID: 2331843085380709607, guid: 5706df97cdf27ba49a0f927eb658626d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -195,5 +268,15 @@ PrefabInstance:
 --- !u!4 &5424994296583964262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2331843085380709607, guid: 5706df97cdf27ba49a0f927eb658626d, type: 3}
+  m_PrefabInstance: {fileID: 7716123562678495873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7212903875890194561 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1084325875752632832, guid: 5706df97cdf27ba49a0f927eb658626d, type: 3}
+  m_PrefabInstance: {fileID: 7716123562678495873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2609917848659058443 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5705329600062518666, guid: 5706df97cdf27ba49a0f927eb658626d, type: 3}
   m_PrefabInstance: {fileID: 7716123562678495873}
   m_PrefabAsset: {fileID: 0}
